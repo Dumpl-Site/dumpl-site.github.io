@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+
+<div class="page-header">
+  <p class="eyebrow">Community</p>
+  <h1 class="section-title">Gallery</h1>
+  <p class="section-body">Images, videos, audio, and files from the community.</p>
+</div>
+
+<div class="gallery-wrap">
+  <div class="gallery-filters">
+    <div class="filter-row" role="group" aria-label="Filter by type">
+      <button class="filter-btn active" data-type="all">All</button>
+      <button class="filter-btn" data-type="image">Images</button>
+      <button class="filter-btn" data-type="gif">GIFs</button>
+      <button class="filter-btn" data-type="video">Videos</button>
+      <button class="filter-btn" data-type="audio">Audio</button>
+      <button class="filter-btn" data-type="file">Files</button>
+    </div>
+    <div class="filter-row" role="group" aria-label="Filter by tag">
+      <button class="filter-btn active" data-tag="all">All</button>
+      <button class="filter-btn" data-tag="milestone">Milestone</button>
+      <button class="filter-btn" data-tag="event">Event</button>
+      <button class="filter-btn" data-tag="notable">Notable</button>
+      <button class="filter-btn" data-tag="funnies">Funnies</button>
+      <button class="filter-btn" data-tag="general">General</button>
+    </div>
+  </div>
+
+  <div class="gallery-grid" id="gallery-grid">
+    <!-- gallery.json fills shit here -->
+  </div>
+
+  <div class="load-more-wrap" id="gallery-load-more-wrap">
+    <button class="btn-secondary" id="gallery-load-more">Load more NOW!</button>
+  </div>
+</div>
+
+<div class="lightbox-backdrop" id="lightbox-backdrop" aria-modal="true" role="dialog" aria-label="Image lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="3" y1="3" x2="15" y2="15"/>
+      <line x1="15" y1="3" x2="3" y2="15"/>
+    </svg>
+  </button>
+  <a class="lightbox-download" id="lightbox-download" download aria-label="Download image">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M8 2v8M4 7l4 4 4-4"/>
+      <path d="M2 13h12"/>
+    </svg>
+  </a>
+  <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <polyline points="10,3 5,8 10,13"/>
+    </svg>
+  </button>
+  <button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Next image">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <polyline points="6,3 11,8 6,13"/>
+    </svg>
+  </button>
+  <div class="lightbox-inner" id="lightbox-inner">
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+    <p class="lightbox-meta" id="lightbox-meta"></p>
+  </div>
+</div>
+
+<!-- Futa Inflation (expanded item overlay) -->
+<div class="card-fullscreen-backdrop" id="gallery-expand-backdrop" aria-modal="true" role="dialog" aria-label="Expanded item" hidden>
+  <div class="card-fullscreen-wrap">
+    <button class="overlay-close-btn" id="gallery-expand-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="3" x2="15" y2="15"/>
+        <line x1="15" y1="3" x2="3" y2="15"/>
+      </svg>
+    </button>
+    <div class="card-fullscreen-panel" id="gallery-expand-panel">
+      <div class="card-fullscreen-content" id="gallery-expand-content">
+        <!-- gallery.json fills shit here too -->
+      </div>
+    </div>
+  </div>
+</div>

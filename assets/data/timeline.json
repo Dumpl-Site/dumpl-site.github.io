@@ -1,0 +1,13 @@
+[
+  {
+    "date": "2024-08-14",
+    "title": "Server Founded",
+    "description": "The Dumpl' Server is born.",
+    "details": "Started with a small group of 7 people on its first day. Of which we have 5 remaining.",
+    "tag": "milestone",
+    "thumbnail": null,
+    "media": [
+      { "type": "image", "src": "https://placehold.co/600x300/262b34/e8521a?text=Launch+Day", "caption": "Launch day screenshot" }
+    ]
+  }
+]

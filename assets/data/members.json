@@ -1,0 +1,65 @@
+[
+  {
+    "name": "@figure.one",
+    "role": "Director",
+    "category": "director",
+    "avatar": "assets/images/people/figure_one_pfp.png",
+    "banner": "assets/images/people/figure_one_banner.png",
+    "bio_short": "Founder & Director of The Dumpl' Site",
+    "bio_long": "I"
+  },
+  {
+    "name": "@dayzoo",
+    "role": "Special Dumpl'",
+    "category": "executive",
+    "avatar": "assets/images/people/dayzoo_pfp.png",
+    "banner": "assets/images/people/dayzoo_banner.png",
+    "bio_short": "hampter",
+    "bio_long": "The second dumpl'. Hamburger. German. Rim(job)World fanatic."
+  },
+  {
+    "name": "@moontr3",
+    "role": "Special Dumpl'",
+    "category": "executive",
+    "avatar": "assets/images/people/moontr3_pfp.png",
+    "banner": "assets/images/people/moontr3_banner.png",
+    "bio_short": "The Game, Python, Denpa, Russian",
+    "bio_long": "Sure, I'll write a longer version of your bio for you! Send me the text requirements and I'll start working on it."
+  },
+  {
+    "name": "@azazel.nerd",
+    "role": "Senior Dumpl'",
+    "category": "senior",
+    "avatar": "assets/images/people/azazel_nerd_pfp.png",
+    "banner": "assets/images/people/azazel_nerd_banner.png",
+    "bio_short": "Azazel the Doompling",
+    "bio_long": "Nora | Level-3   Damage-6  Defense-5  Special Ability: Mental Retardation."
+  },
+  {
+    "name": "@rreii_kunii",
+    "role": "Senior Dumpl'",
+    "category": "senior",
+    "avatar": "assets/images/people/rreii_kunii_pfp.png",
+    "banner": "assets/images/people/rreii_kunii_banner.png",
+    "bio_short": "",
+    "bio_long": ""
+  },
+  {
+    "name": "@turtlemilk4231",
+    "role": "Spoon",
+    "category": "senior",
+    "avatar": "assets/images/people/turtlemilk4231_pfp.png",
+    "banner": "assets/images/people/turtlemilk4231_banner.png",
+    "bio_short": "Spoon",
+    "bio_long": ""
+  },
+  {
+    "name": "@_diegopro",
+    "role": "Mexican Dumpl'",
+    "category": "icon",
+    "avatar": "assets/images/people/_diegopro_pfp.png",
+    "banner": "assets/images/people/_diegopro_banner.png",
+    "bio_short": "Mexican Ahh",
+    "bio_long": "[insert mexican noises here][aye caramba][insert more mexican noises here]"
+  }
+]

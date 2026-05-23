@@ -22,19 +22,19 @@
       </svg>
     </button>
   </div>
-
-  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
-    <div class="nav-overlay-inner">
-      <ul class="nav-overlay-links" role="list">
-        <li><a href="/" class="nav-overlay-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-        <li><a href="/timeline/" class="nav-overlay-link{% if page.url contains 'timeline' %} active{% endif %}">Timeline</a></li>
-        <li><a href="/gallery/" class="nav-overlay-link{% if page.url contains 'gallery' %} active{% endif %}">Gallery</a></li>
-        <li><a href="/more-info/" class="nav-overlay-link{% if page.url contains 'more-info' %} active{% endif %}">More</a></li>
-        <li><a href="/funsies/" class="nav-overlay-link{% if page.url contains 'funsies' %} active{% endif %}">Funsies</a></li>
-      </ul>
-      <button class="nav-overlay-join" onclick="openInvite(); closeMenu();" aria-label="Join the Discord server">
-        Join the Discord
-      </button>
-    </div>
-  </div>
 </nav>
+
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <div class="nav-overlay-inner">
+    <ul class="nav-overlay-links" role="list">
+      <li><a href="/" class="nav-overlay-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
+      <li><a href="/timeline/" class="nav-overlay-link{% if page.url contains 'timeline' %} active{% endif %}">Timeline</a></li>
+      <li><a href="/gallery/" class="nav-overlay-link{% if page.url contains 'gallery' %} active{% endif %}">Gallery</a></li>
+      <li><a href="/more-info/" class="nav-overlay-link{% if page.url contains 'more-info' %} active{% endif %}">More</a></li>
+      <li><a href="/funsies/" class="nav-overlay-link{% if page.url contains 'funsies' %} active{% endif %}">Funsies</a></li>
+    </ul>
+    <button class="nav-overlay-join" onclick="openInvite(); closeMenu();" aria-label="Join the Discord server">
+      Join the Discord
+    </button>
+  </div>
+</div>

@@ -403,18 +403,10 @@
     var old = listEl.querySelectorAll('.spine-dot, .spine-seg');
     for (var i = 0; i < old.length; i++) { old[i].parentNode.removeChild(old[i]); }
 
-    /* resolve CSS variables via a temp element so clamp() is fully computed */
-    var probe = document.createElement('div');
-    probe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;';
-    document.body.appendChild(probe);
-    function cssVar(name, fallback) {
-      probe.style.width = 'var(' + name + ',' + fallback + 'px)';
-      return parseFloat(getComputedStyle(probe).width) || fallback;
-    }
-    var TL_W   = cssVar('--tl-w',       4);
-    var TL_GAP = cssVar('--tl-seg-gap', 20);
-    var DOT_R  = cssVar('--tl-dot-r',   7);
-    document.body.removeChild(probe);
+    var style  = getComputedStyle(listEl);
+    var TL_W   = parseFloat(style.getPropertyValue('--tl-w'))        || 4;
+    var TL_GAP = parseFloat(style.getPropertyValue('--tl-seg-gap'))  || 20;
+    var DOT_R  = parseFloat(style.getPropertyValue('--tl-dot-r'))    || 7;
 
     var listTop  = listEl.getBoundingClientRect().top + window.scrollY;
     var listRect = listEl.getBoundingClientRect();

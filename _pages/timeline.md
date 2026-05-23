@@ -1,7 +1,7 @@
 ---
 layout: timeline
 title: Timeline
-permalink: /timeline
+permalink: /timeline/
 scripts:
   - /assets/js/timeline.js
 ---

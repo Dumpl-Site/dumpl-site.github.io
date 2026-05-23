@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: The Dumpl' Site
+title: The Dumpl' Website
 email: figureone.f@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The Dumpl' Site's official website. Fittingly named The Dumpl' Website. It serves as a timeline and promo
+  The Dumpl' Site's official website. Fittingly named The Dumpl' Website.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""
 collection:

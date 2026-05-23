@@ -411,6 +411,7 @@
     var listTop  = listEl.getBoundingClientRect().top + window.scrollY;
     var listRect = listEl.getBoundingClientRect();
 
+    var spineX = listRect.width / 2;
     var firstPill = listEl.querySelector('.year-pill');
     if (firstPill) {
       var fp = firstPill.getBoundingClientRect();

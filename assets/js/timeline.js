@@ -392,18 +392,10 @@
     });
   }
 
-  /*
-   * drawSpine — measures real DOM positions and absolutely places:
-   *   - a dot centred on each card's vertical midpoint
-   *   - segments between consecutive anchors (pill centres and dot centres)
-   *     with --tl-gap breathing room at each end
-   */
   function drawSpine() {
-    /* remove previously drawn spine elements */
     var old = listEl.querySelectorAll('.spine-dot, .spine-seg');
     for (var i = 0; i < old.length; i++) { old[i].parentNode.removeChild(old[i]); }
 
-    /* resolve CSS variables via a temp element so clamp() is fully computed */
     var probe = document.createElement('div');
     probe.style.cssText = 'position:absolute;visibility:hidden;pointer-events:none;';
     document.body.appendChild(probe);
@@ -419,17 +411,12 @@
     var listTop  = listEl.getBoundingClientRect().top + window.scrollY;
     var listRect = listEl.getBoundingClientRect();
 
-    /* derive spine X from the first pill's actual rendered centre —
-       this way JS always matches wherever CSS has placed the pill,
-       no hardcoded breakpoint values that can drift */
-    var spineX = listRect.width / 2; /* fallback: centre */
     var firstPill = listEl.querySelector('.year-pill');
     if (firstPill) {
       var fp = firstPill.getBoundingClientRect();
       spineX = fp.left + fp.width / 2 - listRect.left;
     }
 
-    /* collect ordered anchor points down the spine */
     var anchors = [];
     var children = listEl.children;
 
@@ -442,9 +429,9 @@
           var pr = pill.getBoundingClientRect();
           anchors.push({
             type:   'pill',
-            y:      pr.top  + window.scrollY + pr.height / 2, /* centre for dot placement */
-            yStart: pr.top  + window.scrollY,                 /* top edge  — segment comes down from here */
-            yEnd:   pr.top  + window.scrollY + pr.height      /* bottom edge — segment leaves from here   */
+            y:      pr.top  + window.scrollY + pr.height / 2, /* corcle */
+            yStart: pr.top  + window.scrollY,
+            yEnd:   pr.top  + window.scrollY + pr.height
           });
         }
       }
@@ -457,15 +444,14 @@
           anchors.push({
             type:   'dot',
             y:      mid,
-            yStart: mid - DOT_R,   /* top of dot    */
-            yEnd:   mid + DOT_R,   /* bottom of dot */
+            yStart: mid - DOT_R,
+            yEnd:   mid + DOT_R,
             cardEl: cardEl
           });
         }
       }
     }
 
-    /* helper: make an absolutely-positioned child of listEl */
     function spineEl(cls) {
       var el = document.createElement('div');
       el.className = cls;
@@ -477,7 +463,7 @@
       return el;
     }
 
-    /* dots */
+    /* corcles */
     for (var a = 0; a < anchors.length; a++) {
       if (anchors[a].type !== 'dot') continue;
       var dot = spineEl('spine-dot');
@@ -485,7 +471,7 @@
       dot.style.width  = (DOT_R * 2) + 'px';
       dot.style.height = (DOT_R * 2) + 'px';
 
-      /* hover effect — bind to the card, update the dot */
+      /* corcle hover */
       (function (d) {
         anchors[a].cardEl.addEventListener('mouseenter', function () {
           d.style.background = 'var(--color-accent)';
@@ -498,7 +484,6 @@
       })(dot);
     }
 
-    /* segments between consecutive anchors — gap measured from anchor surfaces */
     for (var s = 0; s < anchors.length - 1; s++) {
       var from = anchors[s];
       var to   = anchors[s + 1];
@@ -515,7 +500,6 @@
     }
   }
 
-  /* redraw on resize — use rAF so it tracks the frame, no debounce lag */
   var rafPending = false;
   window.addEventListener('resize', function () {
     if (!rafPending) {

@@ -30,10 +30,10 @@
   --tag-funnies: #f5c542;
   --tag-general: #9a9fa8;
   --max-w: 1200px;
-  --tl-gap:     clamp(8px, 2vw, 8px);
-  --tl-seg-gap: var(--tl-gap);
+  --tl-gap:     clamp(12px, 2vw, 24px);
+  --tl-seg-gap: clamp(8px, 2vw, 16px);
   --tl-w:       4px;
-  --tl-dot-r:   8px;
+  --tl-dot-r:   7px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -476,7 +476,7 @@ img, video { max-width: 100%; display: block; }
   justify-content: center;
   margin-left: 0;
   margin-right: 0;
-  gap: var(--tl-gap);
+  gap: var(--tl-seg-gap);
 }
 
 .year-divider::before,
@@ -506,12 +506,12 @@ img, video { max-width: 100%; display: block; }
   z-index: 3;
 }
 
-.timeline-segment { display: none; } /* replaced by drawSpine() */
+.timeline-segment { display: none; }
 
 .timeline-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: calc(var(--tl-gap) * 2 + var(--tl-dot-r) * 2); /* gap spans the spine */
+  column-gap: calc(var(--tl-gap) * 2 + var(--tl-dot-r) * 2);
   align-items: center;
   position: relative;
   z-index: 2;
@@ -523,10 +523,9 @@ img, video { max-width: 100%; display: block; }
 .timeline-item.side-left  .timeline-card { grid-column: 1; }
 .timeline-item.side-right .timeline-card { grid-column: 2; }
 
-.timeline-dot   { display: none; } /* replaced by spine-dot */
+.timeline-dot   { display: none; }
 .timeline-spacer { display: none; }
 
-/* absolutely-positioned spine elements drawn by drawSpine() */
 .spine-dot {
   position: absolute;
   border-radius: 50%;
@@ -606,15 +605,13 @@ img, video { max-width: 100%; display: block; }
 }
 
 @media (max-width: 600px) {
-  /* --tl-pill is half the pill diameter — spine sits at pill centre,
-     so we pad the list left by that amount to push everything into alignment */
   .timeline-list {
     padding-left: calc(clamp(52px, 6vw, 68px) / 2);
   }
 
   .year-divider {
     justify-content: flex-start;
-    margin-left: calc(-1 * clamp(52px, 6vw, 68px) / 2); /* pull back to list edge so pill aligns to spine */
+    margin-left: calc(-1 * clamp(52px, 6vw, 68px) / 2);
   }
   .year-divider::before { display: none; }
   .year-divider::after  { display: block; }

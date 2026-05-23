@@ -9,38 +9,5 @@
     "media": [
       { "type": "image", "src": "", "caption": "" }
     ]
-  },
-  {
-    "date": "2025-08-14",
-    "title": "The Server is Founded",
-    "description": "The Dumpl' Server is born.",
-    "details": "Started with a small group of 7 people on its first day. of which 5 remain.",
-    "tag": "milestone",
-    "thumbnail": null,
-    "media": [
-      { "type": "image", "src": "", "caption": "" }
-    ]
-  },
-  {
-    "date": "2024-08-12",
-    "title": "The Server is Founded",
-    "description": "The Dumpl' Server is born.",
-    "details": "Started with a small group of 7 people on its first day. of which 5 remain.",
-    "tag": "milestone",
-    "thumbnail": null,
-    "media": [
-      { "type": "image", "src": "", "caption": "" }
-    ]
-  },
-  {
-    "date": "2025-08-11",
-    "title": "The Server is Founded",
-    "description": "The Dumpl' Server is born.",
-    "details": "Started with a small group of 7 people on its first day. of which 5 remain.",
-    "tag": "milestone",
-    "thumbnail": null,
-    "media": [
-      { "type": "image", "src": "", "caption": "" }
-    ]
   }
 ]

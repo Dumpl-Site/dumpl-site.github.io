@@ -1,0 +1,129 @@
+/* index.css */
+
+/* i need a hero */
+.hero {
+  position: relative; min-height: clamp(340px,50vw,520px);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('/assets/images/banner.png');
+  background-size: cover; background-position: center;
+  filter: brightness(.35); z-index: 0;
+}
+.hero-bg-fallback {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg,#2a1f1a,#1a1f2a,#1a2a1f); z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,rgba(12,13,15,.2) 0%,rgba(12,13,15,.75) 100%);
+  z-index: 1;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: clamp(40px,6vw,80px) clamp(16px,4vw,32px); max-width: 700px;
+}
+.hero-icon {
+  width: 96px; height: 96px; border-radius: 50%;
+  border: 2px solid var(--color-accent-subtle-border-strong);
+  background: var(--color-surface);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto clamp(16px,2vw,24px); overflow: hidden;
+  color: var(--color-accent);
+}
+.hero-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.hero-eyebrow {
+  font-size: clamp(11px,1vw,13px); font-weight: 600;
+  text-transform: uppercase; letter-spacing: .12em;
+  color: var(--color-accent); margin-bottom: 8px;
+}
+.hero-title {
+  font-size: clamp(28px,5vw+16px,56px); font-weight: 700;
+  line-height: 1.1; margin-bottom: clamp(10px,1.5vw,16px);
+}
+.hero-subtitle {
+  font-size: clamp(14px,1.5vw+10px,18px); color: var(--color-muted);
+  margin-bottom: clamp(20px,3vw,32px);
+}
+.hero-actions {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+
+/* staaaatuuss */
+.stats-bar {
+  background: var(--color-surface);
+  border-top: 0.5px solid var(--color-border);
+  border-bottom: 0.5px solid var(--color-border);
+}
+.stats-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  padding: clamp(20px,3vw,28px) clamp(20px,4vw,40px);
+  display: flex; justify-content: center; align-items: center;
+  gap: 0; flex-wrap: wrap;
+}
+.stat-item {
+  text-align: center;
+  padding: clamp(8px,1.5vw,12px) clamp(24px,4vw,56px);
+  flex: 1; min-width: 120px;
+}
+.stat-divider {
+  width: 1px; height: clamp(32px,4vw,44px);
+  background: var(--color-border); flex-shrink: 0;
+}
+.stat-value {
+  font-size: clamp(22px,3vw+14px,34px); font-weight: 700;
+  color: var(--color-text); line-height: 1.1; display: block;
+}
+.stat-online { color: var(--color-online); }
+.stat-label {
+  font-size: clamp(10px,.8vw+8px,12px); color: var(--color-muted);
+  text-transform: uppercase; letter-spacing: .08em; margin-top: 4px;
+  display: block;
+}
+
+.about-section, .features-section, .steps-section {
+  padding: clamp(48px,6vw,80px) clamp(20px,4vw,40px);
+}
+.about-section { border-top: 0.5px solid var(--color-border); }
+.about-section .section-body {
+  max-width: 100%;
+  border-left: 2px solid var(--color-accent);
+  padding-left: clamp(16px,2vw,24px);
+  margin-top: clamp(16px,2vw,24px);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: clamp(12px,2vw,20px); margin-top: clamp(24px,3vw,36px);
+}
+.feature-card {
+  background: var(--color-surface); border: 0.5px solid var(--color-border);
+  border-radius: 10px; padding: clamp(16px,2vw,24px); transition: border-color .2s;
+}
+.feature-card:hover { border-color: var(--color-accent); }
+.feature-icon-wrap {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: var(--color-accent-subtle); border: 0.5px solid var(--color-accent-subtle-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-accent); margin-bottom: 12px;
+}
+.feature-title { font-size: clamp(13px,1vw+11px,15px); font-weight: 600; margin-bottom: 6px; }
+.feature-desc { font-size: clamp(12px,.8vw+10px,13px); color: var(--color-muted); line-height: 1.5; }
+
+.steps-list {
+  display: flex; flex-direction: column;
+  gap: clamp(12px,2vw,20px); margin-top: clamp(20px,3vw,32px);
+}
+.step-item { display: flex; gap: clamp(12px,2vw,20px); align-items: flex-start; }
+.step-badge {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--color-accent-subtle); border: 1px solid var(--color-accent-subtle-border-strong);
+  color: var(--color-accent); font-weight: 700; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.step-title { font-size: clamp(14px,1vw+12px,16px); font-weight: 600; margin-bottom: 4px; }
+.step-desc { font-size: clamp(12px,.8vw+10px,14px); color: var(--color-muted); line-height: 1.5; }

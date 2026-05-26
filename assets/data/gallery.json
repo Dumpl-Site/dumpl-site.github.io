@@ -11,7 +11,7 @@
     "type": "image",
     "src": "/assets/images/gallery/a_new_start.png",
     "caption": "Dumpl' Site 1st Anniversary art",
-    "uploader": "reii",
+    "uploader": "Reii",
     "date": "",
     "tags": ["general", "notable"]
   },
@@ -59,7 +59,7 @@
     "type": "image",
     "src": "/assets/images/gallery/all_i_wanted_was_to_rotate.png",
     "caption": "All I wanted was to rotate",
-    "uploader": "reii",
+    "uploader": "Reii",
     "date": "",
     "tags": ["funnies"]
   },
@@ -67,7 +67,7 @@
     "type": "image",
     "src": "/assets/images/gallery/and_the_fact_that_my_teacher_started_this_all.png",
     "caption": "Gay, gay, gay, dog, gay, gay, gay...",
-    "uploader": "reii",
+    "uploader": "Reii",
     "date": "",
     "tags": ["funnies"]
   },
@@ -172,6 +172,14 @@
     "type": "image",
     "src": "/assets/images/gallery/well_i_do_fuck_animals.png",
     "caption": "he does what?",
+    "uploader": "@figure.one",
+    "date": "",
+    "tags": ["funnies"]
+  },
+  {
+    "type": "image",
+    "src": "/assets/images/gallery/can_i_glaze_you.png",
+    "caption": "Can I glaze you?",
     "uploader": "@figure.one",
     "date": "",
     "tags": ["funnies"]

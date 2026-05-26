@@ -199,7 +199,7 @@
     "uploader": "@figure.one",
     "date": "",
     "tags": ["funnies"]
-  }
+  },
   {
     "type": "image",
     "src": "/assets/images/gallery/aaallllright.png",
@@ -210,7 +210,7 @@
   },
   {
     "type": "image",
-    "src": "/assets/images/gallery/ah.png",
+    "src": "/assets/images/gallery/ah.jpg",
     "caption": "Ah~",
     "uploader": "@dayzoo",
     "date": "",

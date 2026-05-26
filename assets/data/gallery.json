@@ -199,15 +199,7 @@
     "uploader": "@figure.one",
     "date": "",
     "tags": ["funnies"]
-  },
-  {
-    "type": "image",
-    "src": "/assets/images/gallery/a_faggot_being_cooked.png",
-    "caption": "A faggot being cooked",
-    "uploader": "@figure.one",
-    "date": "",
-    "tags": ["funnies"]
-  },
+  }
   {
     "type": "image",
     "src": "/assets/images/gallery/aaallllright.png",
